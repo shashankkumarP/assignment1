@@ -2,22 +2,24 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  let list1 = ["Android","Blackberry","iphone","WindowPhone"];
+  let list2 = ["Samsung","Htc","Micromax","Apple"];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <h1>Mobile operating system</h1>
+      {list1.map((el)=>{
+        return <li>{el}</li>
+      })}
+      <br></br>
+      <br></br>
+     <h1>Mobile Manufacturers</h1>
+     {list2.map((el)=>{
+       return <li>{el}</li>
+     })}
+
+
+
     </div>
   );
 }
